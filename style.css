@@ -1,0 +1,375 @@
+/* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+:root {
+    --cor-primaria: #009E0D;
+    --cor-texto-preto: #1d1d1d;
+    --cor-fundo: #f8f9fa;
+    --cor-texto: #495057;
+    --cor-branca: #ffffff;
+    --cor-borda: #dee2e6;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    color: var(--cor-texto);
+    background-color: var(--cor-branca);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--cor-texto-preto);
+    font-weight: 700;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    background-color: var(--cor-branca);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img {
+    height: 55px;
+    width: auto;
+}
+.cta-button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+.cta-button:hover {
+    background-color: #007a0a;
+}
+
+/* --- SEÇÃO HERO --- */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 500px;
+    padding: 40px 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--cor-branca);
+    background-image: url('images/banner.png');
+}
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+}
+#hero h1 {
+    color: var(--cor-branca);
+    font-size: 2.8em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.cta-button-hero {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+.cta-button-hero:hover {
+    transform: scale(1.05);
+}
+.cta-button-hero .fab {
+    margin-right: 12px;
+}
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+section {
+    padding: 80px 0;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.section-title p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--cor-texto);
+}
+#o-que-e {
+    background-color: var(--cor-branca);
+    border-top: 1px solid var(--cor-fundo);
+}
+.section-description {
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+#ajuda {
+    background-color: var(--cor-fundo);
+}
+.ajuda-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.ajuda-item {
+    background: var(--cor-branca);
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--cor-borda);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.ajuda-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+.ajuda-item i {
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+.ajuda-item h4 {
+    font-size: 1.1em;
+}
+
+/* --- SEÇÃO VETERINÁRIO ÚNICO (ATIVA) --- */
+#veterinario {
+    background-color: var(--cor-branca);
+}
+.vet-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Coluna da foto é menor que a da bio */
+    gap: 50px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.vet-photo img {
+    width: 100%;
+    border-radius: 50%; /* Foto redonda para um toque mais pessoal */
+    border: 5px solid var(--cor-fundo);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.vet-bio h3 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.vet-bio h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+.vet-bio p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+
+/* --- SEÇÃO EQUIPE (COMENTADA) ---
+#equipe {
+    background-color: var(--cor-branca);
+}
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.vet-card {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.vet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+.vet-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 4px solid var(--cor-primaria);
+    background-color: var(--cor-branca);
+}
+.vet-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+.vet-card h4 {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.vet-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+*/
+
+
+/* --- SEÇÃO CONTATO --- */
+#contato {
+    background-color: var(--cor-fundo);
+}
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+.canais-diretos {
+    display: grid;
+    gap: 20px;
+}
+.contato-card {
+    background-color: var(--cor-branca);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    transition: transform 0.3s, border-color 0.3s;
+}
+.contato-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-primaria);
+}
+.contato-card i {
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+.form-container h3 {
+    text-align: center;
+    margin-top: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+}
+form input:focus, form textarea:focus {
+    outline: 2px solid var(--cor-primaria);
+}
+form button {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #212529;
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 30px 0;
+    border-top: 5px solid var(--cor-primaria);
+}
+footer strong {
+    color: var(--cor-branca);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+    /* Estilo para equipe comentado
+    .equipe-grid {
+        grid-template-columns: 1fr;
+    }
+    */
+}
+@media (max-width: 768px) {
+    header .container {
+        justify-content: space-between;
+    }
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+    #hero::before {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    }
+    .ajuda-grid {
+        grid-template-columns: 1fr;
+    }
+    .vet-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .vet-photo {
+        max-width: 250px;
+        margin: 0 auto 30px auto;
+    }
+}
+@media (max-width: 480px) {
+    header .container {
+        justify-content: center;
+    }
+    .cta-button {
+        display: none;
+    }
+}
