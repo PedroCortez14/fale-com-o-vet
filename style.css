@@ -344,7 +344,7 @@ form button {
 
 /* --- RODAPÉ (NOVO LAYOUT) --- */
 footer {
-    background-color: #0F4A37; /* Um verde escuro, mais próximo da imagem */
+    background-color: #212529; /* Um verde escuro, mais próximo da imagem */
     color: rgba(255, 255, 255, 0.8);
     padding-top: 60px; /* Apenas espaçamento no topo */
 }
